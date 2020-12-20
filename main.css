@@ -3,13 +3,11 @@
    These are the final styles for the project.
    Author:   Saddam Arbaa
    Website:  TODO
-			========================================== */
+	========================================== */
 
 /*====== Start creating My own Framework for some repeated styles(Main Rulez) ======*/
 
-:root {
-  --yellow: #ffc600;
-}
+:root {--yellow: #ffc600;}
 
 html {
   color: #444;
@@ -17,13 +15,9 @@ html {
   font-size: 20px;
 }
 
-p {
-  line-height: 1.8;
-}
+p {line-height: 1.8;}
 
-img {
-  max-width: 100%;
-}
+img {max-width: 100%;}
 
 a {
   color: black;
@@ -39,3 +33,50 @@ h2 {
 }
 
 /*====== End Framework ======*/
+
+/*====== Start article ======*/
+
+.post {
+  display: grid;
+  max-width: 1000px;
+  margin: 200px auto;
+  grid-gap: 10px 50px;
+  grid-template-columns: 3fr 12fr 5fr; /* split the block into three columns */
+}
+
+/* select all the element inside (post class) and position them in the second column */
+.post > * {grid-column: 2/-2;}
+
+.post > figure {
+  margin: 0;
+  grid-column: 1/-1;
+}
+
+figcaption {font-size: 10px;}
+
+.post > blockquote {
+  grid-column: 1/-1;
+  font-size: 60px;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+.tip {
+  background: #fafafa;
+  padding: 10px;
+  grid-row: span 5;
+  align-self: start;
+}
+
+.tip-left {
+  grid-column: 1 / span 1;  /* positioned to the left side bar */
+  text-align: right;
+  border-right: 2px solid var(--yellow);
+}
+
+.tip-right {
+  /* grid-column: 3 / span 1; */
+  grid-column: span 1/-1;   /* positioned to the left side bar */
+  border-left: 2px solid var(--yellow);
+}
