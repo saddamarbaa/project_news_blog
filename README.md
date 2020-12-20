@@ -1,2 +1,1 @@
-# full-blog-layout
-Full Bleed Blog Layout
+# Project: Full News Blog Layout Using CSS Grid
