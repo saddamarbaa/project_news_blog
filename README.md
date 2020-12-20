@@ -1,1 +1,2 @@
-# Project: Full News Blog Layout Using CSS Grid
+#  news-blog-layout
+Project: News Blog Layout Using CSS Grid
